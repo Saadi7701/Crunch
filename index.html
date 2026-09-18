@@ -35,7 +35,7 @@
       <div class="hero-art">
         <div class="stamp">100%<br /><small>fresh &amp; saucy</small></div>
         <img src="burger.png" alt="CRUNCH Chicken Burger" />
-        <div class="scribble" style="color: var(--yellow);">made<br />to<br />mess<br />with</div>
+        <div class="scribble" style="color: var(--black);">made<br />to<br />mess<br />with</div>
       </div>
       <div class="hero-footer">
         <p class="hero-intro">Crispy chicken, soft buns, and sauces that actually mean something. Fresh when you order,
@@ -67,61 +67,41 @@
         <div><strong>Big</strong><span>Flavor<br />Energy</span></div>
       </div>
     </section>
-    <section class="menu-section section" id="menu">
-      <div class="section-label">02 / Dig in</div>
-      <div class="section-heading">
-        <h2>The menu<br /><span>is calling.</span></h2>
-        <p>Big flavor, no shortcuts.<br />Delivery charges: <b>Rs. 100</b></p>
-      </div>
-    </section>
-    <section class="menu-body-section">
-      <div class="menu-tabs" role="tablist">
-        <button class="active" data-category="all">All things</button>
-        <button data-category="burgers">Burgers</button>
-        <button data-category="wraps">Wraps</button>
-        <button data-category="sides">Sides &amp; wings</button>
-      </div>
-      <div class="menu-grid">
-        <article class="food-card burgers">
-          <div class="food-image">
-            <img src="burger.png" alt="Wehshi burger" />
-            <span class="price">Rs. 499</span>
-          </div>
-          <h3>Wehshi Burger</h3>
-          <p>Big, crispy, saucy and unapologetic.</p>
-        </article>
-        <article class="food-card wraps">
-          <div class="food-image coral">
-            <img src="wrap.png" alt="Smol wrap" />
-            <span class="price">Rs. 399</span>
-          </div>
-          <h3>Smol Wrap</h3>
-          <p>Small name. Massive personality.</p>
-        </article>
-        <article class="food-card sides">
-          <div class="food-image yellow">
-            <img src="loaded-fries.png" alt="Gochu wings" />
-            <span class="price">Rs. 449</span>
-          </div>
-          <h3>Gochu Wings</h3>
-          <p>Sticky, spicy, gone in seconds.</p>
-        </article>
+    <section class="menu-body-section" id="menu">
+      <div class="menu-header-centered">
+        <h2 class="menu-title-text">Crunch Menu</h2>
+        <p class="menu-punchline">Serving crispy burgers, loaded wraps, fiery pizzas, and signature saucy bites
+          delivered fresh to your door.</p>
+        <p class="menu-delivery-note">Delivery charges: <b>Rs. 100</b></p>
       </div>
 
-      <div class="menu-scan">
-        <div>
-          <p class="eyebrow">Want the full spread?</p>
-          <h3>Take a closer<br /><span>look.</span></h3>
-          <button class="button button-dark open-menu-modal" id="openMenuModalBtn">Open full menu</button>
-        </div>
-        <div class="menu-scan-previews">
-          <img src="menu-burgers.jpg" alt="CRUNCH Menu - Burgers & Wraps" class="menu-preview-img open-menu-modal"
-            title="Click to view full menu" />
-          <img src="menu-pizza.jpg" alt="CRUNCH Menu - Pizzas & Extras" class="menu-preview-img open-menu-modal"
-            title="Click to view full menu" />
+      <div class="menu-cards-wrapper">
+        <div class="menu-cards-grid">
+          <div class="menu-card-item open-menu-modal" data-card-index="0" title="Click to view full size">
+            <img src="card-1.jpg" alt="CRUNCH Menu - Burgers" />
+          </div>
+          <div class="menu-card-item open-menu-modal" data-card-index="1" title="Click to view full size">
+            <img src="card-2.jpg" alt="CRUNCH Menu - Wrap &amp; Fries" />
+          </div>
+          <div class="menu-card-item open-menu-modal" data-card-index="2" title="Click to view full size">
+            <img src="card-3.jpg" alt="CRUNCH Menu - Pizza" />
+          </div>
+          <div class="menu-card-item open-menu-modal" data-card-index="3" title="Click to view full size">
+            <img src="card-4.jpg" alt="CRUNCH Menu - Extras" />
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="delivery-banner" id="order-banner">
+      <p class="delivery-banner-text">Delivery charges: <span>RS 100</span></p>
+      <div class="banner-actions">
+        <a class="btn-cube whatsapp-btn" href="https://wa.me/923075046000" target="_blank" rel="noreferrer">Order on
+          WhatsApp</a>
+        <a class="btn-cube call-btn" href="tel:+923075046000">Call Us</a>
+      </div>
+    </section>
+
     <section class="stories section">
       <div class="section-label">03 / The word on the street</div>
       <div class="story-head">
@@ -149,40 +129,18 @@
       </div>
     </section>
 
-    <section class="whatsapp-banner section" id="order-banner">
-      <div class="banner-content">
-        <h2>Craving Crunch?</h2>
-        <p>Drop us a message on WhatsApp or give us a ring.</p>
-        <div class="banner-actions">
-          <a class="btn-cube whatsapp-btn" href="https://wa.me/923075046000" target="_blank" rel="noreferrer">Order on
-            WhatsApp</a>
-          <a class="btn-cube call-btn" href="tel:+923075046000">Call Us</a>
-        </div>
-      </div>
-    </section>
+
   </main>
 
-  <!-- Full Menu In-Screen Modal -->
-  <div id="fullMenuModal" class="menu-modal" aria-hidden="true" role="dialog" aria-label="Full Menu">
-    <div class="menu-modal-overlay" id="menuModalOverlay"></div>
-    <div class="menu-modal-content">
-      <div class="menu-modal-header">
-        <h2>CRUNCH Full Menu</h2>
-        <button class="menu-modal-close" id="closeMenuModalBtn" aria-label="Close menu">&times;</button>
-      </div>
-      <div class="menu-modal-tabs">
-        <button class="modal-tab-btn active" data-target="modal-burgers">Burgers, Wraps &amp; Fries</button>
-        <button class="modal-tab-btn" data-target="modal-pizza">Pizzas &amp; Extras</button>
-      </div>
-      <div class="menu-modal-body">
-        <div class="modal-menu-page active" id="modal-burgers">
-          <img src="menu-burgers.jpg" alt="CRUNCH Burgers & Wraps Menu" />
-        </div>
-        <div class="modal-menu-page" id="modal-pizza">
-          <img src="menu-pizza.jpg" alt="CRUNCH Pizza Menu" />
-        </div>
-      </div>
+  <!-- Clean Lightbox Menu Modal -->
+  <div id="fullMenuModal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Menu Card Preview">
+    <div class="lightbox-overlay" id="menuModalOverlay"></div>
+    <button class="lightbox-close" id="closeMenuModalBtn" aria-label="Close modal">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="prevCardBtn" aria-label="Previous card">&lsaquo;</button>
+    <div class="lightbox-container">
+      <img id="lightboxImg" src="card-1.jpg" alt="Menu Card Full View" />
     </div>
+    <button class="lightbox-nav lightbox-next" id="nextCardBtn" aria-label="Next card">&rsaquo;</button>
   </div>
 
   <footer>
@@ -195,7 +153,9 @@
         <p>Alipur Chattha Road, Alipur Chattha<br />Open 24 Hours</p>
       </div>
       <div><b>Follow the sauce</b>
-        <p><a href="https://www.facebook.com/share/1DDXRLEFbr/" target="_blank" rel="noreferrer">Facebook</a> · <a href="https://www.tiktok.com/@crunch.pakistan?_r=1&amp;_d=f0l14cjjm0l20b&amp;sec_uid=MS4wLjABAAAAqZwYp-4Lfl0da8dWMY-kB_6f0F6Fa6OfnIKzKuEVomaOssiPzEy2P2xNCkCg1zl1&amp;share_author_id=7421272008175420458&amp;sharer_language=en&amp;source=h5_m&amp;u_code=em1ff284glb6e7&amp;timestamp=1789750359&amp;user_id=7540232213892744214&amp;sec_user_id=MS4wLjABAAAA2ci4kEVvL7AnQa-bCq2DuXHzpiMbmTiyRL7Zi99j7bBj1sNrGQ4g8eYYUP5eQouV&amp;item_author_type=2&amp;utm_source=copy&amp;utm_campaign=client_share&amp;utm_medium=android&amp;share_iid=7686541412650059542&amp;share_link_id=1584d4f8-18d4-462b-b5d0-0b1ab2ebc546&amp;share_app_id=1233&amp;ugbiz_name=ACCOUNT&amp;ug_btm=b6880%2Cb5836&amp;social_share_type=5&amp;share_enter_from=others_homepage&amp;item_author_type=2&amp;enable_checksum=1" target="_blank" rel="noreferrer">TikTok</a></p>
+        <p><a href="https://www.facebook.com/share/1DDXRLEFbr/" target="_blank" rel="noreferrer">Facebook</a> · <a
+            href="https://www.tiktok.com/@crunch.pakistan?_r=1&amp;_d=f0l14cjjm0l20b&amp;sec_uid=MS4wLjABAAAAqZwYp-4Lfl0da8dWMY-kB_6f0F6Fa6OfnIKzKuEVomaOssiPzEy2P2xNCkCg1zl1&amp;share_author_id=7421272008175420458&amp;sharer_language=en&amp;source=h5_m&amp;u_code=em1ff284glb6e7&amp;timestamp=1789750359&amp;user_id=7540232213892744214&amp;sec_user_id=MS4wLjABAAAA2ci4kEVvL7AnQa-bCq2DuXHzpiMbmTiyRL7Zi99j7bBj1sNrGQ4g8eYYUP5eQouV&amp;item_author_type=2&amp;utm_source=copy&amp;utm_campaign=client_share&amp;utm_medium=android&amp;share_iid=7686541412650059542&amp;share_link_id=1584d4f8-18d4-462b-b5d0-0b1ab2ebc546&amp;share_app_id=1233&amp;ugbiz_name=ACCOUNT&amp;ug_btm=b6880%2Cb5836&amp;social_share_type=5&amp;share_enter_from=others_homepage&amp;item_author_type=2&amp;enable_checksum=1"
+            target="_blank" rel="noreferrer">TikTok</a></p>
       </div>
       <div><b>Legal</b>
         <p><a href="terms.html">Terms & Conditions</a> · <a href="privacy.html">Privacy Policy</a></p>

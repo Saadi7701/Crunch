@@ -16,16 +16,28 @@ tabs.forEach((tab) => {
   });
 });
 
-// Full Menu Modal Logic
+// Clean Lightbox Menu Modal Logic
 const modal = document.getElementById('fullMenuModal');
 const openModalBtns = document.querySelectorAll('.open-menu-modal');
 const closeModalBtn = document.getElementById('closeMenuModalBtn');
 const modalOverlay = document.getElementById('menuModalOverlay');
-const modalTabBtns = document.querySelectorAll('.modal-tab-btn');
-const modalPages = document.querySelectorAll('.modal-menu-page');
+const lightboxImg = document.getElementById('lightboxImg');
+const prevCardBtn = document.getElementById('prevCardBtn');
+const nextCardBtn = document.getElementById('nextCardBtn');
 
-function openModal() {
+const cardImages = ['card-1.jpg', 'card-2.jpg', 'card-3.jpg', 'card-4.jpg'];
+let currentCardIndex = 0;
+
+function updateLightboxImage(index) {
+  currentCardIndex = (index + cardImages.length) % cardImages.length;
+  if (lightboxImg) {
+    lightboxImg.src = cardImages[currentCardIndex];
+  }
+}
+
+function openModal(index = 0) {
   if (modal) {
+    updateLightboxImage(index);
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -43,28 +55,34 @@ function closeModal() {
 openModalBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    openModal();
+    const cardIndex = parseInt(btn.dataset.cardIndex || '0', 10);
+    openModal(cardIndex);
   });
 });
 
 if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
 if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
-    closeModal();
-  }
-});
-
-modalTabBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    modalTabBtns.forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
-    const targetId = btn.dataset.target;
-    modalPages.forEach((page) => {
-      page.classList.toggle('active', page.id === targetId);
-    });
+if (prevCardBtn) {
+  prevCardBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    updateLightboxImage(currentCardIndex - 1);
   });
+}
+
+if (nextCardBtn) {
+  nextCardBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    updateLightboxImage(currentCardIndex + 1);
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (modal && modal.classList.contains('open')) {
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft') updateLightboxImage(currentCardIndex - 1);
+    if (e.key === 'ArrowRight') updateLightboxImage(currentCardIndex + 1);
+  }
 });
 
 // Testimonials Slider
