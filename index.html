@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CRUNCH - burgers, wraps, wings and saucy good times." />
+  <meta name="description" content="CRUNCH - burgers, wraps, pizza, and saucy good times." />
   <title>CRUNCH | Serving All Things with extra crisp</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,8 +32,7 @@
       </div>
       <div class="hero-art">
         <div class="stamp">100%<br /><small>fresh &amp; saucy</small></div>
-        <img src="https://johnnyjugnu.pk/wp-content/uploads/2025/10/Johnny-Jugnu-Wehshi-1024x1024.webp"
-          alt="CRUNCH Wehshi burger" />
+        <img src="burger.png" alt="CRUNCH Chicken Burger" />
         <div class="scribble" style="color: var(--yellow);">made<br />to<br />mess<br />with</div>
       </div>
       <div class="hero-footer">
@@ -53,9 +52,8 @@
         <h2>Serving all<br /><span>things saucy.</span></h2>
         <div>
           <p class="lead">We don’t freeze, pre-cook, or rush the process. We make food that hits with purpose.</p>
-          <p>From the Wehshi Burger to the Smol Wrap and Gochu Wings, every bite is built around that perfect mix of
-            crunch and flavor that Lahore keeps coming back for.</p><a class="text-link" href="#menu">Get to know the
-            menu</a>
+          <p>From our signature Chicken Thrill to the Fillet Wrap and Hunger Eat Pizza, every bite is built around that perfect mix of crunch and flavor.</p>
+          <a class="text-link" href="#menu">Get to know the menu</a>
         </div>
       </div>
     </section>
@@ -74,40 +72,126 @@
       </div>
     </section>
     <section class="menu-body-section">
-      <div class="menu-tabs" role="tablist"><button class="active" data-category="all">All things</button><button
-          data-category="burgers">Burgers</button><button data-category="wraps">Wraps</button><button
-          data-category="sides">Sides &amp; wings</button></div>
+      <div class="menu-tabs" role="tablist">
+        <button class="active" data-category="all">All Items</button>
+        <button data-category="burgers-fries">Burgers &amp; Fries</button>
+        <button data-category="pizza">Pizza</button>
+        <button data-category="wraps-sauces">Wraps &amp; Dip Sauce</button>
+      </div>
       <div class="menu-grid">
-        <article class="food-card burgers">
-          <div class="food-image"><img
-              src="https://johnnyjugnu.pk/wp-content/uploads/2025/10/Johnny-Jugnu-Wehshi-1024x1024.webp"
-              alt="Wehshi burger" /><span class="price">Rs. 499</span></div>
-          <h3>Wehshi Burger</h3>
-          <p>Big, crispy, saucy and unapologetic.</p>
+        <!-- Burgers & Fries -->
+        <article class="food-card burgers-fries">
+          <div class="food-image">
+            <img src="burger.png" alt="Chicken Frill Burger" />
+            <span class="price">Rs. 650</span>
+          </div>
+          <h3>Chicken Frill</h3>
+          <p>Crispy chicken frill fillet with cheese slice, fresh lettuce &amp; signature sauce.</p>
         </article>
-        <article class="food-card wraps">
-          <div class="food-image coral"><img
-              src="https://johnnyjugnu.pk/wp-content/uploads/2025/10/Johnny-Jugnu-Wehshi-1024x1024.webp"
-              alt="Smol wrap" /><span class="price">Rs. 399</span></div>
-          <h3>Smol Wrap</h3>
-          <p>Small name. Massive personality.</p>
+
+        <article class="food-card burgers-fries">
+          <div class="food-image coral">
+            <img src="burger.png" alt="Chicken Patty Burger" />
+            <span class="price">Rs. 450</span>
+          </div>
+          <h3>Chicken Patty</h3>
+          <p>Tender chicken patty burger loaded with melted cheese and fresh greens.</p>
         </article>
-        <article class="food-card sides">
-          <div class="food-image yellow"><img
-              src="https://johnnyjugnu.pk/wp-content/uploads/2025/10/Johnny-Jugnu-Wehshi-1024x1024.webp"
-              alt="Gochu wings" /><span class="price">Rs. 449</span></div>
-          <h3>Gochu Wings</h3>
-          <p>Sticky, spicy, gone in seconds.</p>
+
+        <article class="food-card burgers-fries">
+          <div class="food-image yellow">
+            <img src="burger.png" alt="Chicken Thrill Burger" />
+            <span class="price">Rs. 650</span>
+          </div>
+          <h3>Chicken Thrill</h3>
+          <p>Double-stacked crispy fried chicken patty with signature thrill sauce &amp; cheese.</p>
+        </article>
+
+        <article class="food-card burgers-fries">
+          <div class="food-image yellow">
+            <img src="loaded-fries.png" alt="Loaded Blast" />
+            <span class="price">Rs. 700</span>
+          </div>
+          <h3>Loaded Blast</h3>
+          <p>Loaded fries with crispy chicken bits, olives, jalapeños &amp; rich cheese sauce.</p>
+        </article>
+
+        <article class="food-card burgers-fries">
+          <div class="food-image">
+            <img src="loaded-fries.png" alt="Plain Fries" />
+            <span class="price">Rs. 350</span>
+          </div>
+          <h3>Plain Fries</h3>
+          <p>Golden crispy french fries seasoned with signature CRUNCH seasoning.</p>
+        </article>
+
+        <!-- Pizza Section -->
+        <article class="food-card pizza">
+          <div class="food-image yellow">
+            <img src="pizza.png" alt="Hunger Eat Pizza" />
+            <span class="price">Med Rs. 1550 | Lg Rs. 2220</span>
+          </div>
+          <h3>Hunger Eat Pizza</h3>
+          <p>Special chicken topped with signature sauce, capsicum, onions, olives &amp; double cheese crust.</p>
+        </article>
+
+        <article class="food-card pizza">
+          <div class="food-image coral">
+            <img src="pizza.png" alt="Habanero Bite Pizza" />
+            <span class="price">Med Rs. 1200 | Lg Rs. 1650 | XL Rs. 2350</span>
+          </div>
+          <h3>Habanero Bite Pizza</h3>
+          <p>Spicy chicken with 2 bold Hunger Eat sauces, capsicum, onions, tomatoes, sweet corn &amp; oregano.</p>
+        </article>
+
+        <article class="food-card pizza">
+          <div class="food-image">
+            <img src="pizza.png" alt="Pizza Extras" />
+            <span class="price">Veggies Rs. 50 | Extra Rs. 180+</span>
+          </div>
+          <h3>Pizza Extras</h3>
+          <p>Extra Veggies (Rs. 50) | Extra Chicken or Cheese (Med Rs. 180 / Lg Rs. 210 / XL Rs. 280).</p>
+        </article>
+
+        <!-- Wraps & Dip Sauce Section -->
+        <article class="food-card wraps-sauces">
+          <div class="food-image coral">
+            <img src="wrap.png" alt="Fillet Wrap" />
+            <span class="price">Rs. 760</span>
+          </div>
+          <h3>Fillet Wrap</h3>
+          <p>Crispy chicken fillet wrapped in a warm tortilla with crisp veggies &amp; signature sauce.</p>
+        </article>
+
+        <article class="food-card wraps-sauces">
+          <div class="food-image yellow">
+            <img src="wrap.png" alt="Dip Sauces" />
+            <span class="price">Rs. 100 Each</span>
+          </div>
+          <h3>Dip Sauces</h3>
+          <p>Chipotle · Garlic · Atomic · Habanero - Signature house dipping sauces.</p>
+        </article>
+
+        <article class="food-card wraps-sauces">
+          <div class="food-image">
+            <img src="wrap.png" alt="Cheese Slice" />
+            <span class="price">Rs. 100</span>
+          </div>
+          <h3>Cheese Slice Extra</h3>
+          <p>Add an extra slice of rich, melted cheddar cheese to any burger or wrap.</p>
         </article>
       </div>
+
       <div class="menu-scan">
         <div>
           <p class="eyebrow">Want the full spread?</p>
-          <h3>Take a closer<br /><span>look.</span></h3><a class="button button-dark"
-            href="https://johnnyjugnu.pk/wp-content/uploads/2026/08/Johnny-Jugnu-Menu-576x1024.webp" target="_blank"
-            rel="noreferrer">Open full menu</a>
-        </div><img src="https://johnnyjugnu.pk/wp-content/uploads/2026/08/Johnny-Jugnu-Menu-576x1024.webp"
-          alt="CRUNCH menu" />
+          <h3>Take a closer<br /><span>look.</span></h3>
+          <button class="button button-dark open-menu-modal" id="openMenuModalBtn">Open full menu</button>
+        </div>
+        <div class="menu-scan-previews">
+          <img src="menu-burgers.jpg" alt="CRUNCH Menu - Burgers & Wraps" class="menu-preview-img open-menu-modal" title="Click to view full menu" />
+          <img src="menu-pizza.jpg" alt="CRUNCH Menu - Pizzas & Extras" class="menu-preview-img open-menu-modal" title="Click to view full menu" />
+        </div>
       </div>
     </section>
     <section class="stories section">
@@ -151,6 +235,30 @@
       </div>
     </section>
   </main>
+
+  <!-- Full Menu In-Screen Modal -->
+  <div id="fullMenuModal" class="menu-modal" aria-hidden="true" role="dialog" aria-label="Full Menu">
+    <div class="menu-modal-overlay" id="menuModalOverlay"></div>
+    <div class="menu-modal-content">
+      <div class="menu-modal-header">
+        <h2>CRUNCH Full Menu</h2>
+        <button class="menu-modal-close" id="closeMenuModalBtn" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="menu-modal-tabs">
+        <button class="modal-tab-btn active" data-target="modal-burgers">Burgers, Wraps &amp; Fries</button>
+        <button class="modal-tab-btn" data-target="modal-pizza">Pizzas &amp; Extras</button>
+      </div>
+      <div class="menu-modal-body">
+        <div class="modal-menu-page active" id="modal-burgers">
+          <img src="menu-burgers.jpg" alt="CRUNCH Burgers & Wraps Menu" />
+        </div>
+        <div class="modal-menu-page" id="modal-pizza">
+          <img src="menu-pizza.jpg" alt="CRUNCH Pizza Menu" />
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-top"><a class="brand" href="#top"><span style="font-size: 80px; letter-spacing: 4px;">CRUNCH</span></a>
       <h2>Good food.<br /><em>Good mood.</em></h2><a class="button button-light" href="#order-banner">Order now</a>
@@ -172,4 +280,4 @@
   <script src="script.js"></script>
 </body>
 
-</html>
+</html>
