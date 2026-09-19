@@ -5,7 +5,7 @@
   --red-dark: #171514;
   --yellow: #f3bd31;
   --line: rgba(23, 21, 20, .22);
-  --display: 'Bebas Neue', Impact, sans-serif;
+  --display: 'Alfa Slab One', 'Cooper Black', Impact, serif;
   --body: 'DM Sans', Arial, sans-serif
 }
 
@@ -129,7 +129,7 @@ a {
 
 .hero h1,
 h2 {
-  font: clamp(75px, 10vw, 150px)/.8 var(--display);
+  font: clamp(55px, 7.5vw, 110px)/.9 var(--display);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .015em;
@@ -389,6 +389,56 @@ h2 {
 
 .section-heading b {
   color: var(--yellow)
+}
+
+.find-us-timing {
+  text-align: right;
+  color: var(--ink);
+  font-family: var(--body);
+  align-self: flex-end;
+}
+
+.find-us-timing b {
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--ink);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.find-us-timing p {
+  font-size: clamp(16px, 1.8vw, 20px);
+  margin: 4px 0;
+  color: var(--ink);
+  font-weight: 700;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.find-us-timing p span {
+  color: #8b261d;
+  font-weight: 800;
+}
+
+.footer-action-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-instagram {
+  background: #E1306C;
+  color: #ffffff !important;
+  border-color: #c1235b;
+}
+
+.button-instagram:hover {
+  background: #c1235b;
 }
 
 .menu-tabs {
@@ -876,14 +926,34 @@ footer {
   line-height: 1;
 }
 
-/* Hero logo image - yellow tint */
+/* Hero logo image - Heavy Slab font */
 .hero-logo {
-  width: clamp(120px, 22vw, 220px);
+  width: clamp(210px, 32vw, 380px);
   height: auto;
   object-fit: contain;
-  margin-bottom: 16px;
+  margin-bottom: clamp(35px, 6vw, 65px);
   display: block;
-  filter: invert(76%) sepia(60%) saturate(700%) hue-rotate(5deg) brightness(1.05);
+  filter: none;
+}
+
+.hero-logo-slab {
+  letter-spacing: 0.05em;
+}
+
+.hero-heading-swash {
+  font-family: 'Italiana', 'Bodoni Moda', 'Playfair Display', serif !important;
+  font-size: clamp(52px, 7.5vw, 110px) !important;
+  line-height: 1.05 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+.hero-heading-swash em {
+  font-style: italic;
+  font-family: 'Italiana', 'Bodoni Moda', 'Playfair Display', serif !important;
+  color: var(--yellow) !important;
 }
 
 .button,
@@ -904,12 +974,13 @@ footer {
 }
 
 .header-order {
-  background: #25d366;
+  background: #8b261d;
   color: #fff;
   padding: 10px 18px;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  border-color: #5a1913;
 }
 
 .delivery-banner {
@@ -977,9 +1048,9 @@ footer {
 }
 
 .whatsapp-btn {
-  background: #25d366;
-  color: var(--ink);
-  border-color: #1a9a49;
+  background: #8b261d;
+  color: #ffffff;
+  border-color: #5a1913;
 }
 
 .call-btn {
@@ -1150,7 +1221,7 @@ main {
 }
 
 .menu-title-text {
-  font-family: var(--body);
+  font-family: var(--display);
   font-size: 32px;
   font-weight: 700;
   color: var(--ink);
