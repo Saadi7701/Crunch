@@ -1882,15 +1882,14 @@ img {
     height: min(80vw, 320px);
   }
 
-  /* hero-art: center everything, add breathing room */
+  /* hero-art: give it enough height so absolute children (scribble) have room */
   .hero-art {
     width: 100%;
+    height: 380px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-bottom: 60px; /* room for scribble below */
   }
 
   /* Yellow circle: match slideshow size */
@@ -1899,15 +1898,13 @@ img {
     height: min(80vw, 320px);
   }
 
-  /* Move scribble below the circle instead of overlapping */
+  /* Scribble: stay at bottom-right corner of hero-art */
   .scribble {
-    position: relative !important;
-    right: auto !important;
-    bottom: auto !important;
-    margin-top: 14px;
-    font-size: 22px;
-    transform: rotate(-6deg);
-    text-align: center;
+    position: absolute !important;
+    right: 4% !important;
+    bottom: 6% !important;
+    font-size: 20px;
+    transform: rotate(-10deg);
     color: var(--ink) !important;
     z-index: 3;
   }
@@ -1934,7 +1931,12 @@ img {
     height: 86vw;
   }
 
+  .hero-art {
+    height: 340px;
+  }
+
   .scribble {
-    font-size: 18px;
+    font-size: 16px;
+    right: 2% !important;
   }
 }
