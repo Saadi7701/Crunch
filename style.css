@@ -1863,3 +1863,78 @@ img {
     text-align: center;
   }
 }
+
+/* ── Hero Slideshow Responsive ─────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-slideshow {
+    width: min(44vw, 500px);
+    height: min(44vw, 500px);
+  }
+}
+
+/* Mobile — fix the big overlap/scribble/stamp chaos */
+@media (max-width: 700px) {
+  /* Slideshow: full-width, centered, reasonable height */
+  .hero-slideshow {
+    width: min(80vw, 320px);
+    height: min(80vw, 320px);
+  }
+
+  /* hero-art: center everything, add breathing room */
+  .hero-art {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 60px; /* room for scribble below */
+  }
+
+  /* Yellow circle: match slideshow size */
+  .hero-art:before {
+    width: min(80vw, 320px);
+    height: min(80vw, 320px);
+  }
+
+  /* Move scribble below the circle instead of overlapping */
+  .scribble {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-top: 14px;
+    font-size: 22px;
+    transform: rotate(-6deg);
+    text-align: center;
+    color: var(--ink) !important;
+    z-index: 3;
+  }
+
+  /* Keep stamp visible but smaller */
+  .stamp {
+    width: 80px;
+    height: 80px;
+    font-size: 26px;
+    top: 5%;
+    left: 2%;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  .hero-slideshow {
+    width: 86vw;
+    height: 86vw;
+  }
+
+  .hero-art:before {
+    width: 86vw;
+    height: 86vw;
+  }
+
+  .scribble {
+    font-size: 18px;
+  }
+}
