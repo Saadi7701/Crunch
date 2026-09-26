@@ -120,4 +120,31 @@ if (menuToggle) {
     const navLinks = document.querySelector('.nav-links');
     if (navLinks) navLinks.classList.toggle('open');
   });
-}
+}
+
+// ── Hero Food Slideshow ──────────────────────────────────────────
+(function () {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+
+  let current = 0;
+
+  function nextSlide() {
+    const prev = current;
+    current = (current + 1) % slides.length;
+
+    // Slide current out to the left
+    slides[prev].classList.add('exiting');
+    slides[prev].classList.remove('active');
+
+    // Slide next in from the right
+    slides[current].classList.add('active');
+
+    // Clean up exiting class after the transition ends
+    setTimeout(() => {
+      slides[prev].classList.remove('exiting');
+    }, 750);
+  }
+
+  setInterval(nextSlide, 3000);
+})();
